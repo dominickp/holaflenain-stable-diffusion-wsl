@@ -1,0 +1,156 @@
+version: '3.1'
+
+# https://hub.docker.com/r/holaflenain/stable-diffusion
+services:
+
+  # debian:
+  #   image: debian:bookworm-slim
+  #   command: tail -f /dev/null
+  #   init: true
+    # volumes: 
+      # - /home/dom/debian:/tmp/debian
+      # - \\wsl$\Ubuntu-22.04\home\dom\debian:/tmp/debian
+      # - /mnt/c/Documents and Settings/Dom/Documents/GitHub/stable-diffusion-ui/data:/opt/stable-diffusion:rw
+
+  easy-diffusion:
+    container_name: easy-diffusion
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=01, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  automatic:
+    container_name: automatic
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=02, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  invoke-ai:
+    container_name: invoke-ai
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=03, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  sd-next:
+    container_name: sd-next
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=04, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  comfy-ui:
+    container_name: comfy-ui
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=05, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  fooocus:
+    container_name: fooocus
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=06, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  stable-swarm:
+    container_name: stable-swarm
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=07, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  volta-ml:
+    container_name: volta-ml
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=08, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  lama-cleaner:
+    container_name: lama-cleaner
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=50, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  facefusion:
+    container_name: facefusion
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=51, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
+
+  kohya:
+    container_name: kohya
+    image: holaflenain/stable-diffusion:latest
+    environment: [WEBUI_VERSION=70, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
+    ports: [9000:9000/tcp]
+    volumes: 
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
+      - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/cache:/home/diffusion/.cache:rw
+    init: true
+    tty: true
+    deploy: {resources: {reservations: {devices: [{driver: nvidia, capabilities: [gpu, video]}]}}}
