@@ -3,15 +3,6 @@ version: '3.1'
 # https://hub.docker.com/r/holaflenain/stable-diffusion
 services:
 
-  # debian:
-  #   image: debian:bookworm-slim
-  #   command: tail -f /dev/null
-  #   init: true
-    # volumes: 
-      # - /home/dom/debian:/tmp/debian
-      # - \\wsl$\Ubuntu-22.04\home\dom\debian:/tmp/debian
-      # - /mnt/c/Documents and Settings/Dom/Documents/GitHub/stable-diffusion-ui/data:/opt/stable-diffusion:rw
-
   easy-diffusion:
     container_name: easy-diffusion
     image: holaflenain/stable-diffusion:latest

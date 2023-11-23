@@ -1,0 +1,1 @@
+https://hub.docker.com/r/holaflenain/stable-diffusion for Windows and WSL
