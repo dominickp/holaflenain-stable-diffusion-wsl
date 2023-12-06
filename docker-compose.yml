@@ -5,9 +5,9 @@ services:
 
   easy-diffusion:
     container_name: easy-diffusion
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=01, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9901:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -18,9 +18,9 @@ services:
 
   automatic:
     container_name: automatic
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=02, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9902:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -31,9 +31,9 @@ services:
 
   invoke-ai:
     container_name: invoke-ai
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=03, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9903:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -44,9 +44,9 @@ services:
 
   sd-next:
     container_name: sd-next
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=04, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9904:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -57,9 +57,9 @@ services:
 
   comfy-ui:
     container_name: comfy-ui
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=05, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9905:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -70,9 +70,9 @@ services:
 
   fooocus:
     container_name: fooocus
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=06, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9906:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -83,9 +83,9 @@ services:
 
   stable-swarm:
     container_name: stable-swarm
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=07, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9907:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -96,9 +96,9 @@ services:
 
   volta-ml:
     container_name: volta-ml
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=08, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9908:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -109,9 +109,9 @@ services:
 
   lama-cleaner:
     container_name: lama-cleaner
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=50, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9950:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -122,9 +122,9 @@ services:
 
   facefusion:
     container_name: facefusion
-    image: holaflenain/stable-diffusion:latest
+    image: holaflenain/stable-diffusion:2.0.2
     environment: [WEBUI_VERSION=51, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    ports: [9951:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
@@ -135,9 +135,9 @@ services:
 
   kohya:
     container_name: kohya
-    image: holaflenain/stable-diffusion:latest
-    environment: [WEBUI_VERSION=70, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York]
-    ports: [9000:9000/tcp]
+    image: holaflenain/stable-diffusion:2.0.2
+    environment: [WEBUI_VERSION=70, NVIDIA_VISIBLE_DEVICES=all, TZ=America/New_York, LD_LIBRARY_PATH=/usr/lib/wsl/lib/]
+    ports: [9970:9000/tcp]
     volumes: 
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui:/opt/stable-diffusion:rw
       - \\wsl$\Ubuntu-22.04\home\dom\stable-diffusion-ui/outputs:/outputs:rw
